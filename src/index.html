@@ -37,7 +37,7 @@
            <input name="Bug " />
          </label>
        </fieldset>
-      <button onclick="functions.js()">
+      <button id="001" onclick="functions.js()">
           Raise Bug
       </button>
       </form>
@@ -47,6 +47,15 @@
         const { text } = await( await fetch(`/api/message`)).json();
         document.querySelector('#name').textContent = text;
     }())
+    document.getElementById("001").onclick=app;
+    
+    function app() {
+    const handleSubmit = event => {
+      event.preventDefault();
+      alert ('You have successfully submitted this bug')
+    }
+}
+
     </script>
 </body>
 
