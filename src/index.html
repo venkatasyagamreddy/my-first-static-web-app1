@@ -47,7 +47,7 @@
         const { text } = await( await fetch(`/api/message`)).json();
         document.querySelector('#name').textContent = text;
     }())
-    document.getElementById("001").onclick=app;
+    document.getElementById("001").onclick=app();
     
     function app() {
     document.getElementById("001").onclick=Date();
