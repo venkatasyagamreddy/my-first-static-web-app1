@@ -11,8 +11,36 @@
 <body>
   <main>
     <h1>Bug DB Project 1</h1>
-    <p>Loading content from the API: <b id="name">...</b></p>
-  </main>
+    <div className="wrapper">
+      <h1>Bug Submission Form</h1>
+      <form onSubmit={handleSubmit}>
+      <fieldset>
+         <label>
+           <p>Bug ID</p>
+           <input name="Bug ID" />
+         </label>
+         <label>
+           <p>Bug Information</p>
+           <input name="Bug Information" />
+         </label>
+         <label>
+           <p>Bug Assigned Too</p>
+           <input name="Bug Assigned Too" />
+         </label>
+         <label>
+           <p>Bug State</p>
+           <input name="Bug State" />
+         </label>
+         <label>
+           <p>Bug Created</p>
+           <input name="Bug " />
+         </label>
+       </fieldset>
+      <button onclick="RaiseBug()">
+          Raise Bug
+      </button>
+      </form>
+    </div>  </main>
   <script>
     (async function() {
         const { text } = await( await fetch(`/api/message`)).json();
