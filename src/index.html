@@ -12,27 +12,27 @@
     <h1>Submit your bug here....</h1>
     <div className="wrapper">
       <h1>Bug Submission Form</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset>
          <label>
            <p>Bug ID</p>
-           <input name="Bug ID" />
+           <input {..register("BugID")} />
          </label>
          <label>
            <p>Bug Information</p>
-           <input name="Bug Information" />
+           <input {..register("BugInformation")} />
          </label>
          <label>
            <p>Bug Assigned Too</p>
-           <input name="Bug Assigned Too" />
+           <input {..register("BugAssignedTo")} />
          </label>
          <label>
            <p>Bug State</p>
-           <input name="Bug State" />
+           <input {..register("BugState")} />
          </label>
          <label>
            <p>Bug Created</p>
-           <input name="Bug " />
+           <input {..register("BugCreated")} />
          </label>
        </fieldset>
       <button  id="001" >
